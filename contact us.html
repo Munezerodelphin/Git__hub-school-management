@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - Swift</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/swift logo2.jpeg">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: grey;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color:white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px black;
+        }
+
+        h2 {
+            text-align: center;
+            color: blue;
+            margin-bottom: 20px;
+            font-size:1.9em;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+            text-align: center;
+            font-size:1.5em;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 1em;
+        }
+        .contact-info a {
+           
+            text-decoration:none;
+        }
+
+        .contact-form {
+            display: grid;
+            grid-gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+            font-size:1.5em;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 1.5em;
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .social-links p{
+            color:blue;
+            font-size:1.3em;
+        }
+
+        .social-links a:hover {
+            color: #007bff;
+        }
+
+        
+        header {
+            background-color: black;
+            color: white;
+            padding: 1em 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .logo a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .log {
+            height: 50px;
+        }
+
+        .heading ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        .heading ul li {
+            margin: 0 15px;
+        }
+
+        .heading ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 50px;
+        }
+
+        .footer0 h1 {
+            margin-bottom: 10px;
+        }
+
+        .footer1 {
+            margin-bottom: 15px;
+        }
+
+        .social-media a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5em;
+            text-decoration: none;
+            
+        }
+    </style>
+</head>
+
+<body>
+     <header>
+    <div class="logo"><a href="#"><img src="img/swift logo2.jpeg"class="log"/></a></div>
+    <div class="search">
+
+      <input type="text" placeholder="Search" id="input">
+        <ion-icon class="s" name="search"></ion-icon>
+     
+    </div>
+    <div class="heading">
+      <ul>
+        <li><a href="index.html" class="under">HOME</a></li>
+        <li><a href="shop.html" class="under">SHOP</a></li>
+        <li><a href="our product.html" class="under">OUR PRODUCTS</a></li>
+        <li><a href="contact us.html" class="under">CONTACT US</a></li>
+        <li><a href="about us.html" class="under">ABOUT US</a></li>
+      </ul>
+    </div>
+    <div class="heading1">
+      <ion-icon name="menu" class="ham"></ion-icon>
+    </div>
+  </header>
+
+    <div class="container">
+        <h2><u>Contact Us</u></h2>
+        <div class="contact-info">
+           
+            <p><strong>Email:</strong> <a href="mailto:info@swiftcompany.com">munezero.d@swiftcompany.com</a></p>
+            <p><strong>Phone:</strong> +250 794 384 740</p>
+            <p><strong>Address:</strong> Kigali, Rwanda</p>
+             <p>We'd love to hear from you! what you think on us</p>
+        </div>
+
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="social-links">
+            <p>Join us on social our media:</p>
+            <a href="#" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer0">
+            <h1><img src="img/swift logo2.jpeg"class="log" ></h1>
+        </div>
+        <div class="footer1 ">
+            Connect with us at<div class="social-media">
+                <a href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </div>
+        </div>
+        <div class="footer2">
+            <div class="product">
+                <div class="heading">Products</div>
+                <div class="div">Sell your Products</div>
+                <div class="div">Advertise</div>
+                <div class="div">Pricing</div>
+                <div class="div">Product Buisness</div>
+            </div>
+            <div class="services">
+                <div class="heading">Services</div>
+                <div class="div">Return</div>
+                <div class="div">Cash Back</div>
+                <div class="div">Affiliate Marketing</div>
+                <div class="div">Others</div>
+            </div>
+            <div class="Company">
+                <div class="heading">Company</div>
+                <div class="div">Complaint</div>
+                <div class="div">Careers</div>
+                <div class="div">Affiliate Marketing</div>
+                <div class="div">Support</div>
+            </div>
+            <div class="Get Help">
+                <div class="heading">Get Help</div>
+                <div class="div">Help Center</div>
+                <div class="div">Privacy Policy</div>
+                <div class="div">Terms</div>
+                <div class="div">Login</div>
+            </div>
+        </div>
+        <div class="footer3">Copyright © <h4>Swift</h4> 2025-2026</div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    </body>
+</html>

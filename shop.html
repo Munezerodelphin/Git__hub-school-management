@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop - Swift</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/swift logo2.jpeg">
+    <style>
+        .shop-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid blue;
+            border-radius: 5px;
+            box-shadow:0 0 10px black;
+            cursor:pointer;
+        }
+
+        .shop-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .shop-item {
+            display: grid;
+            grid-template-columns: 120px 1fr 100px;
+            gap: 15px;
+            align-items: center;
+            border-bottom: 3px solid darkblue;
+            padding: 15px 0;
+        }
+
+        .shop-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-image {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .item-details .item-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size:2em;
+        }
+
+        .item-details .item-description {
+            color: black;
+            font-size: 1.5em;
+        }
+
+        .item-price {
+            color: green;
+            font-weight: bold;
+            font-size:1.6em;
+        }
+
+        .add-to-cart button {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+
+        .add-to-cart button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style for the cart display on the same page */
+        #cart-container {
+            margin-top: 30px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        #cart-container h3 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #cart-items {
+            list-style: none;
+            padding: 0;
+        }
+
+        #cart-items li {
+            border-bottom: 1px solid #eee;
+            padding: 8px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #cart-items li:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item-details {
+            flex-grow: 1;
+        }
+
+        .cart-item-name {
+            font-weight: bold;
+        }
+
+        .cart-item-price {
+            color: green;
+        }
+
+        .remove-from-cart-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 8px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+
+        .remove-from-cart-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo"><a href="#"><img src="img/swift logo2.jpeg"class="log"/></a></div>
+    <div class="search">
+
+      <input type="text" placeholder="Search" id="input">
+        <ion-icon class="s" name="search"></ion-icon>
+     
+    </div>
+    <div class="heading">
+      <ul>
+        <li><a href="index.html" class="under">HOME</a></li>
+        <li><a href="shop.html" class="under">SHOP</a></li>
+        <li><a href="our product.html" class="under">OUR PRODUCTS</a></li>
+        <li><a href="contact us.html" class="under">CONTACT US</a></li>
+        <li><a href="about us.html" class="under">ABOUT US</a></li>
+      </ul>
+    </div>
+    <div class="heading1">
+      <ion-icon name="menu" class="ham"></ion-icon>
+    </div>
+  </header>
+
+    <div class="shop-container">
+        <h2>Our Products</h2>
+        <div class="shop-item" data-name="Sport Shoes" data-price="5" data-image="img/chech2.jpeg">
+            <div class="item-image">
+                <img src="img/chech2.jpeg" alt="Shoes">
+            </div>
+            <div class="item-details">
+                <div class="item-name">Sport Shoes</div>
+                <div class="item-description">Very flexible sport shoes for your active lifestyle.</div>
+            </div>
+            <div class="item-price">$5</div>
+            <div class="add-to-cart">
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="shop-item" data-name="Men's T-Shirt" data-price="6.34" data-image="img/chech.jpeg">
+            <div class="item-image">
+                <img src="img/chech.jpeg" alt="Men's T-Shirt">
+            </div>
+            <div class="item-details">
+                <div class="item-name">Men's T-Shirt</div>
+                <div class="item-description">A comfortable and stylish t-shirt for men.</div>
+            </div>
+            <div class="item-price">$6.34</div>
+            <div class="add-to-cart">
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="shop-item" data-name="Another T-Shirt" data-price="6.34" data-image="img/chech5.jpeg">
+            <div class="item-image">
+                <img src="img/chech5.jpeg" alt="Another T-Shirt">
+            </div>
+            <div class="item-details">
+                <div class="item-name">Another T-Shirt</div>
+                <div class="item-description">A different comfortable and stylish t-shirt for men.</div>
+            </div>
+            <div class="item-price">$6.34</div>
+            <div class="add-to-cart">
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="shop-item" data-name="Women's Shoes" data-price="6.34" data-image="img/chech4.jpeg">
+            <div class="item-image">
+                <img src="img/chech4.jpeg" alt="Women's Shoes">
+            </div>
+            <div class="item-details">
+                <div class="item-name">Women's Shoes</div>
+                <div class="item-description">A comfortable and stylish shoes for women.</div>
+            </div>
+            <div class="item-price">$6.34</div>
+            <div class="add-to-cart">
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="shop-item" data-name="Cool T-Shirt" data-price="6.34" data-image="img/drip.jpeg">
+            <div class="item-image">
+                <img src="img/drip.jpeg" alt="Cool T-Shirt">
+            </div>
+            <div class="item-details">
+                <div class="item-name">Cool T-Shirt</div>
+                <div class="item-description">A very cool and stylish t-shirt for men.</div>
+            </div>
+            <div class="item-price">$6.34</div>
+            <div class="add-to-cart">
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="cart-container">
+        <h3>Shopping Cart</h3>
+        <ul id="cart-items">
+            <li id="empty-cart" style="display: block; text-align: center;">Your cart is empty.</li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="footer0">
+            <h1><img src="img/swift logo2.jpeg"class="log" ></h1>
+        </div>
+        <div class="footer1 ">
+            Connect with us at<div class="social-media">
+                <a href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </div>
+        </div>
+        <div class="footer2">
+            <div class="product">
+                <div class="heading">Products</div>
+                <div class="div">Sell your Products</div>
+                <div class="div">Advertise</div>
+                <div class="div">Pricing</div>
+                <div class="div">Product Buisness</div>
+
+            </div>
+            <div class="services">
+                <div class="heading">Services</div>
+                <div class="div">Return</div>
+                <div class="div">Cash Back</div>
+                <div class="div">Affiliate Marketing</div>
+                <div class="div">Others</div>
+            </div>
+            <div class="Company">
+                <div class="heading">Company</div>
+                <div class="div">Complaint</div>
+                <div class="div">Careers</div>
+                <div class="div">Affiliate Marketing</div>
+                <div class="div">Support</div>
+            </div>
+            <div class="Get Help">
+                <div class="heading">Get Help</div>
+                <div class="div">Help Center</div>
+                <div class="div">Privacy Policy</div>
+                <div class="div">Terms</div>
+                <div class="div">Login</div>
+            </div>
+        </div>
+        <div class="footer3">Copyright © <h4>Swift</h4> 2025-2026</div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addToCartButtons = document.querySelectorAll('.add-cart-btn');
+            const cartItemsList = document.getElementById('cart-items');
+            const emptyCartMessage = document.getElementById('empty-cart');
+            let cart = [];
+
+            // Load cart from local storage if it exists
+            const storedCart = localStorage.getItem('shoppingCart');
+            if (storedCart) {
+                cart = JSON.parse(storedCart);
+                updateCartDisplay();
+            }
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const shopItem = this.closest('.shop-item');
+                    const itemName = shopItem.dataset.name;
+                    const itemPrice = parseFloat(shopItem.dataset.price);
+                    const itemImage = shopItem.dataset.image;
+                    const itemToAdd = {
+                        name: itemName,
+                        price: itemPrice,
+                        image: itemImage,
+                        quantity: 1
+                    };
+
+                    // Check if the item is already in the cart
+                    const existingItem = cart.find(item => item.name === itemName);
+                    if (existingItem) {
+                        existingItem.quantity++;
+                    } else {
+                        cart.push(itemToAdd);
+                    }
+
+                    updateCartDisplay();
+                    saveCart();
+                });
+            });
+
+            function updateCartDisplay() {
+                cartItemsList.innerHTML = ''; // Clear the current display
+
+                if (cart.length === 0) {
+                    emptyCartMessage.style.display = 'block';
+                } else {
+                    emptyCartMessage.style.display = 'none';
+                    cart.forEach(item => {
+                        const listItem = document.createElement('li');
+                        listItem.innerHTML = `
+                            <div class="cart-item-details">
+                                <span class="cart-item-name">${item.name}</span>
+                                <span class="cart-item-price">$${item.price.toFixed(2)}</span>
+                                <span>Quantity: ${item.quantity}</span>
+                            </div>
+                            <button class="remove-from-cart-btn" data-item-name="${item.name}">Remove</button>
+                        `;
+                        cartItemsList.appendChild(listItem);
+                    });
+
+                    // Add event listeners to the remove buttons
+                    const removeButtons = document.querySelectorAll('.remove-from-cart-btn');
+                    removeButtons.forEach(button => {
+                        button.addEventListener('click', function() {
+                            const itemNameToRemove = this.dataset.itemName;
+                            cart = cart.filter(item => item.name !== itemNameToRemove);
+                            updateCartDisplay();
+                            saveCart();
+                        });
+                    });
+                }
+            }
+
+            function saveCart() {
+                localStorage.setItem('shoppingCart', JSON.stringify(cart));
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+     }
+                    .form-control{
+                        border: 1px solid wheat;
+                        border-radius:3px;
+                        max-height:80px;
+                        display:flex-box;
+                        justify-content:center;
+                        text-align:center;
+                        margin:10px 5px;
+                        background:wheat;
+                        cursor:pointer;
+                        
+                    }
+                    .nav-div{
+                        
+                    }
+                    .navigation{
+                        
+                    }
+                    .logo{
+                        margin-right:70em;
+                        font
+                        margin-top: 10px;
+                        
+                    }
+                    .links a{
+                        margin-left: 50px;
+                        text-decoration:none;
+                    }
+                    .links{
+                        padding-left: 30em;
+                        margin-bottom: 20px;
+                    }

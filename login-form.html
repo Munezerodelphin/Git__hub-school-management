@@ -1,0 +1,130 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <title>Swift Login </title>
+                <link rel="shortcut icon" href="img/swift logo2.jpeg">
+
+        </head>
+        <body>
+            
+            
+            <style>
+                body{
+                    background: gray;
+                }
+                .form-container{
+                    border-radius:4px;
+                    text-align:center;
+                    position:center;
+                    font-size:30px;
+                    background-color:transparent;
+                    height:500px;
+                    width:490px;
+                    cursor:pointer;
+                    opacity:34px;
+                    color:black;
+                    margin:3% 30%;
+                    border:none;
+                    display:flex-box;
+                    box-shadow:12px 18px 24px;
+                    backdrop-filter: blur(26px);
+
+                    
+                    
+                }
+                button{
+                    padding:5px 10px;
+                    height:60px;
+                    width:120px;
+                    margin:40px 4px 2px;
+                    border-radius:5px;
+                    font-family:sans-serif;
+                    font-size:30px;
+                    background-color:blue;  
+                    display:flex-box;
+                    box-shadow:2px 8px 4px;
+                    font-weight:bold;
+                }
+                button:hover{
+                    cursor:pointer;
+                    background-color:grey;
+                    color:white;
+                    font-weight:bold;
+                    font-weight: 500px;
+                }
+                body{
+                    text-align:center;
+                    position:center;                    
+                } 
+                input{
+                   
+                    height:10px;
+                    width:440px;
+                    padding:30px;
+                    border-radius:2px;
+                    font-size:22px;
+                    border-width:0px 0px 3px 0px;
+                    outline:none;
+                    font-weight:bold;
+                    background-color:transparent;
+                    border-color:black;
+                    
+                    
+                    
+                }
+                input:hover{
+                   
+                }
+                ::placeholder{
+                    font-weight:bold;
+                    color:black;
+                }
+                .form-inputs{
+                    margin:1em 1px;
+                }
+                h1{
+                    margin-top:1.5em;
+                    padding-top:1em;
+                    color:blue;
+                }
+                .link-signup a{
+                    text-decoration: none;
+                    color:blue;
+                    font-weight: 1000em;
+                }
+            </style>
+            <div class="form-container">
+                <h1>Login</h1>
+                                <p id="demo"></p>
+            <div class="form-inputs">
+                
+                <input type="text"  placeholder="Enter UserNames" required="required" id="user">
+            </div>
+            
+            <div>
+                
+                <input type="password" placeholder="Enter Password" required="required" id="pass">
+            </div>
+                <div>
+                <button onclick="foll()"> Login</button>
+            </div>
+                <div class="link-signup">
+                    <h4>Don't have account? <a href="form.html" >Sign Up.</a></h4>                </div>
+            <hr>
+            </--border-style:dotted; -->
+            </--onclick="document.getElementById('demo').innerHTML = Date()"-->
+
+            <script>
+                function foll(location){
+                const pass=document.getElementById("pass").value;
+                const user=document.getElementById("user").value;
+                if(pass==="a" && user=== "Munezero"){
+                   window.location.href= "index.html";
+                    }else{
+                    alert("Login Fail!")
+                    }
+                    
+                }
+            </script>
+        </body>
+    </html>
